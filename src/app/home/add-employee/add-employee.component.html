@@ -1,0 +1,22 @@
+ <div class="main">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+     <h2>ADD EMPLOYEES</h2>
+     <h3>BY KEVIN GOMEZ</h3>
+     <hr/>
+    <p *ngIf="conditionStatus" class="statusFailed"><ngb-alert >{{ myForm.status }} to submit, make sure that required information is given</ngb-alert></p>
+    <p *ngIf="wrongEmpCode" class="statusFailed"><ngb-alert >Employee code is invalid</ngb-alert></p>
+    <p *ngIf="success" class="statusFailed"><ngb-alert >Employee added!</ngb-alert></p>
+        <div class="formcontainer">
+            <div class="container">
+                <label>Employee Code</label>
+                <input formControlName="empCode" type = "text" placeholder="Enter Emp Code(Max 3 digits)">
+                <label> Employee Name </label>
+                <input formControlName="empName" type = "text" placeholder="Enter Emp Name">
+                <label> Mobile </label>
+                <input formControlName="empMobile" type = "text" placeholder="Enter Emp Mobile">
+            </div>
+            <button type="submit">ADD</button>
+        </div>
+        
+    </form>
+<div>

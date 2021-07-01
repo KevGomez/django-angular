@@ -1,0 +1,91 @@
+
+h2{
+    color:rgb(0, 0, 0); 
+    font-family: 'Courier New', monospace; 
+    font-size: 25px; 
+    font-weight: bold; 
+    letter-spacing: 3px; 
+    line-height: 2; 
+    text-align: center; 
+}
+h3{
+    color:rgb(0, 0, 0); 
+    font-family: 'Courier New', monospace; 
+    font-size: 15px; 
+    font-weight: normal; 
+    letter-spacing: 3px; 
+    line-height: 1; 
+    text-align: center; 
+    margin-top: -15px;
+}
+.main{
+    justify-content: center;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 15px;
+    display: flex;
+    margin-top: 20px;
+}
+ form {
+    border: 5px solid #f1f1f1;
+    }
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 16px 8px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+button {
+    background-color: #0a5010;
+    color: white;
+    padding: 14px 0;
+    margin: 10px 0;
+    border: none;
+    cursor: grabbing;
+    width: 100%;
+    }
+h1 {
+    text-align:center;
+    font-size: 45px; 
+    font-weight: bold; 
+    letter-spacing: 4px; 
+    font-family: 'Courier New', monospace; 
+    color:rgb(121, 117, 230); 
+    }
+button:hover {
+    opacity: 0.8;
+    }
+.formcontainer {
+    text-align: left;
+    margin: 24px 50px 12px;
+    }
+.container {
+    padding: 12px 0;
+    text-align:left;
+    }
+span.link {
+    color:#555555;
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    }
+.alink {
+        color:#555555;
+        float: left;
+        padding-top: 10px;
+        padding-bottom: 15px;
+}
+p.statusFailed{
+    color:#ec1313;
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+    /* Change styles for span on extra small screens */
+@media screen and (max-width: 400px) {
+    span.psw {
+    display: block;
+    float: none;
+}}

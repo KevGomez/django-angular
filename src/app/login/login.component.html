@@ -1,0 +1,22 @@
+ <div class="main">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+     <h2>EMPLOYEE MANAGEMENT SYSTEM</h2>
+     <h3>BY KEVIN GOMEZ</h3>
+     <hr/>
+        <h1>LOGIN</h1>
+        <p *ngIf="conditionStatus" class="statusFailed"><ngb-alert >{{ myForm.status }} to submit, make sure that required information is given</ngb-alert></p>
+        <p *ngIf="wrongCred" class="statusFailed"><ngb-alert >Wrong Credentials</ngb-alert></p>
+        <div class="formcontainer">
+            <div class="container">
+                <label>Username</label>
+                <input formControlName="username" type = "text" placeholder="Enter Username" id="username" required >
+                <label> Password </label>
+                <input formControlName="password" type = "password" placeholder="Enter Password">
+            </div>
+            <button type="submit">LOGIN</button>
+            <button type="button" (click)='Logout()'>LOGOUT</button>
+            <span class="link"><a href="register" class="alink"> Not Registered? Click here.</a></span>
+        </div>
+        
+    </form>
+<div>

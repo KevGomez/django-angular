@@ -1,0 +1,36 @@
+<div class="main">
+    <ul *ngFor="let item of vals">
+            <li *ngIf="username == item.user" class="w3-bar">
+                <span class="w3-bar-item w3-xlarge w3-right"><a class="button button4" (click)="(open(content, item.empName, item.empCode, item.empMobile, item.id))">Edit</a></span>
+                <span class="w3-bar-item w3-button w3-xlarge w3-right" (click)="delete(item.id)">&times;</span>
+                <img src="assets/profile.png" class="w3-bar-item w3-circle" style="width:85px">
+                <div class="w3-bar-item">
+                    <span class="w3-large">{{item.empName}}</span><br>
+                    <span class="w3-medium">Employee Code: {{item.empCode}}</span>
+                    <br>
+                    <span class="w3-medium">Employee Mobile: {{item.empMobile}}</span>
+                    <br>
+                    <span class="w3-small">Added by: {{item.user}}</span>
+                </div>
+            </li>
+    </ul>
+</div>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">EDIT EMPLOYEE</h4>
+  </div>
+  <form [formGroup]="myForm" (ngSubmit)="update(content)">
+        <div class="formcontainer">
+                <label>Employee Name</label>
+                <input formControlName="empName" type = "text" >
+                <label> Employee Code </label>
+                <input formControlName="empCode" type = "text" >
+                <label> Employee Mobile </label>
+                <input formControlName="empMobile" type = "text" >
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-outline-dark" >UPDATE</button>
+        </div>
+  </form>
+</ng-template>
+

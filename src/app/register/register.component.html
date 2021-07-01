@@ -1,0 +1,29 @@
+<div class="main">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" >
+     <h2>EMPLOYEE MANAGEMENT SYSTEM</h2>
+     <h3>BY KEVIN GOMEZ</h3>
+     <hr/>
+        <h1>REGISTRATION</h1>
+        <p *ngIf="conditionStatus" class="statusFailed"><ngb-alert >{{ myForm.status }} to submit, make sure that required information is given</ngb-alert></p>
+        <p *ngIf="wrongCred" class="statusFailed"><ngb-alert >Username/Email is already taken and make sure password is in proper standard</ngb-alert></p>
+        <div class="formcontainer">
+            <div class="container">
+                <label>Username</label>
+                <input formControlName="username" type = "text" placeholder="Enter Username" id="username" required >
+                <label> Password </label>
+                <input formControlName="password" type = "password" placeholder="Enter Password (Atleast 8 characters and must contain letters, numbers and special characters)">
+                <label> Password Verification </label>
+                <input formControlName="password2" type = "password" placeholder="Re-Enter Password">
+                <label> Email </label>
+                <input formControlName="email" type = "text" placeholder="Enter Email">
+                <label> First Name </label>
+                <input formControlName="first_name" type = "text" placeholder="Enter first name">
+                <label> Last Name </label>
+                <input formControlName="last_name" type = "text" placeholder="Enter last name">
+            </div>
+            <button type="submit">REGISTER</button>
+            <span class="link"><a href="login" class="alink"> Having an acount? Click here.</a></span>
+        </div>
+        
+    </form>
+<div>
